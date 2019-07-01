@@ -28,6 +28,7 @@ import java.awt.Dimension;
 import java.awt.Point;
 import java.awt.Rectangle;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import javax.annotation.Nullable;
 import lombok.Getter;
@@ -68,4 +69,6 @@ public abstract class Overlay implements LayoutableRenderableEntity
 	{
 		return this.getClass().getSimpleName();
 	}
+
+    protected abstract Collection<Object> getGhosts();
 }
