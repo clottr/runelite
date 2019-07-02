@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.cannon;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import javax.inject.Inject;
@@ -60,7 +59,7 @@ class CannonOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (!plugin.isCannonPlaced() || plugin.getCannonPosition() == null)
 		{

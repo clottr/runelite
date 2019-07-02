@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.mining;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.time.Instant;
 import java.util.Iterator;
@@ -62,7 +61,7 @@ class MiningOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		List<RockRespawn> respawns = plugin.getRespawns();
 		if (respawns.isEmpty())

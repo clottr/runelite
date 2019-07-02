@@ -24,7 +24,6 @@
  */
 package net.runelite.client.plugins.runenergy;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import javax.inject.Inject;
@@ -58,7 +57,7 @@ class RunEnergyOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		final Widget runOrb = client.getWidget(WidgetInfo.MINIMAP_TOGGLE_RUN_ORB);
 

@@ -54,7 +54,7 @@ public class TitleComponent implements LayoutableRenderableEntity
 	private final Rectangle bounds = new Rectangle();
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		final int baseX = preferredLocation.x;
 		final int baseY = preferredLocation.y;

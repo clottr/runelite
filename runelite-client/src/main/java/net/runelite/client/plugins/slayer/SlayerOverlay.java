@@ -92,22 +92,22 @@ class SlayerOverlay extends WidgetItemOverlay
 	}
 
 	@Override
-	public void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget)
+	public Void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget)
 	{
 		if (!ALL_SLAYER_ITEMS.contains(itemId))
 		{
-			return;
+			return null;
 		}
 
 		if (!config.showItemOverlay())
 		{
-			return;
+			return null;
 		}
 
 		int amount = plugin.getAmount();
 		if (amount <= 0)
 		{
-			return;
+			return null;
 		}
 
 		int slaughterCount = plugin.getSlaughterChargeCount();
@@ -136,5 +136,6 @@ class SlayerOverlay extends WidgetItemOverlay
 			? bounds.height
 			: graphics.getFontMetrics().getHeight())));
 		textComponent.render(graphics);
+		return null;
 	}
 }

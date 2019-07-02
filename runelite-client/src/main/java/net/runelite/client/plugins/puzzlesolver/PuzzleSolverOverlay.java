@@ -27,7 +27,6 @@
 package net.runelite.client.plugins.puzzlesolver;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.Point;
@@ -98,7 +97,7 @@ public class PuzzleSolverOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if ((!config.displaySolution() && !config.displayRemainingMoves())
 				|| client.getGameState() != GameState.LOGGED_IN)

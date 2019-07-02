@@ -53,7 +53,7 @@ class AttackStylesOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		panelComponent.getChildren().clear();
 		boolean warnedSkillSelected = plugin.isWarnedSkillSelected();

@@ -24,7 +24,6 @@
  */
 package net.runelite.client.plugins.motherlode;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.time.Duration;
 import java.time.Instant;
@@ -57,7 +56,7 @@ public class MotherlodeGemOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		MotherlodeSession session = motherlodeSession;
 

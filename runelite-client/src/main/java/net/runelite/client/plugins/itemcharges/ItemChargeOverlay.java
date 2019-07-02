@@ -57,11 +57,11 @@ class ItemChargeOverlay extends WidgetItemOverlay
 	}
 
 	@Override
-	public void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget)
+	public Void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget)
 	{
 		if (!displayOverlay())
 		{
-			return;
+            return null;
 		}
 
 		graphics.setFont(FontManager.getRunescapeSmallFont());
@@ -71,7 +71,7 @@ class ItemChargeOverlay extends WidgetItemOverlay
 		{
 			if (!config.showDodgyCount())
 			{
-				return;
+                return null;
 			}
 
 			charges = config.dodgyNecklace();
@@ -80,7 +80,7 @@ class ItemChargeOverlay extends WidgetItemOverlay
 		{
 			if (!config.showBindingNecklaceCharges())
 			{
-				return;
+                return null;
 			}
 
 			charges = config.bindingNecklace();
@@ -89,7 +89,7 @@ class ItemChargeOverlay extends WidgetItemOverlay
 		{
 			if (!config.showExplorerRingCharges())
 			{
-				return;
+                return null;
 			}
 
 			charges = config.explorerRing();
@@ -99,7 +99,7 @@ class ItemChargeOverlay extends WidgetItemOverlay
 			ItemWithCharge chargeItem = ItemWithCharge.findItem(itemId);
 			if (chargeItem == null)
 			{
-				return;
+                return null;
 			}
 
 			ItemChargeType type = chargeItem.getType();
@@ -111,7 +111,7 @@ class ItemChargeOverlay extends WidgetItemOverlay
 				|| (type == BELLOWS && !config.showBellowCharges())
 				|| (type == ABYSSAL_BRACELET && !config.showAbyssalBraceletCharges()))
 			{
-				return;
+                return null;
 			}
 
 			charges = chargeItem.getCharges();
@@ -123,7 +123,8 @@ class ItemChargeOverlay extends WidgetItemOverlay
 		textComponent.setText(charges < 0 ? "?" : String.valueOf(charges));
 		textComponent.setColor(itemChargePlugin.getColor(charges));
 		textComponent.render(graphics);
-	}
+        return null;
+    }
 
 	private boolean displayOverlay()
 	{

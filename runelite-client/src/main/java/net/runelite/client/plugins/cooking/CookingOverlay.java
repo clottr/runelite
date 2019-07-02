@@ -26,7 +26,6 @@
 package net.runelite.client.plugins.cooking;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.text.DecimalFormat;
 import java.time.Instant;
@@ -70,7 +69,7 @@ class CookingOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		CookingSession session = plugin.getSession();
 		if (session == null)

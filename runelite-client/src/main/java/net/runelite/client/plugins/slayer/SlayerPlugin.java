@@ -209,6 +209,9 @@ public class SlayerPlugin extends Plugin
 	private boolean loginFlag;
 	private List<String> targetNames = new ArrayList<>();
 
+	public SlayerPlugin() {
+	}
+
 	@Override
 	protected void startUp() throws Exception
 	{

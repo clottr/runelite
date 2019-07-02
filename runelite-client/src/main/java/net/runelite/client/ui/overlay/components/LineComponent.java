@@ -60,7 +60,7 @@ public class LineComponent implements LayoutableRenderableEntity
 	private final Rectangle bounds = new Rectangle();
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		// Prevent NPEs
 		final String left = MoreObjects.firstNonNull(this.left, "");

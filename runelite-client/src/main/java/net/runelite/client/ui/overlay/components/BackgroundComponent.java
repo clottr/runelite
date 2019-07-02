@@ -55,7 +55,7 @@ public class BackgroundComponent implements RenderableEntity
 	private boolean fill = true;
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		Color outsideStrokeColor = new Color(
 			Math.max(0, backgroundColor.getRed() - OUTSIDE_STROKE_RED_OFFSET),

@@ -8,10 +8,9 @@ import net.runelite.client.config.ConfigItem;
 
 @ConfigGroup("boss")
 public interface BossConfig extends Config
-
 {
     @ConfigItem(
-            keyName = "uniqueKey", name = "Display text", description = "Hover text")
+            keyName = "ON?", name = "All alerts on", description = "Alerts you of all bosses")
     default boolean myCheckbox()
     {
         return true;

@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.tileindicators;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import javax.inject.Inject;
@@ -54,7 +53,7 @@ public class TileIndicatorsOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (config.highlightHoveredTile())
 		{

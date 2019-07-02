@@ -155,4 +155,9 @@ public class ChatboxPerformancePlugin extends Plugin
 			prev.setOpacity(currOpacity);
 		}
 	}
+
+    @Override
+    protected void shutDown() throws Exception {
+        super.shutDown();
+    }
 }

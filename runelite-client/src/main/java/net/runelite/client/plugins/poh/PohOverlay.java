@@ -24,7 +24,6 @@
  */
 package net.runelite.client.plugins.poh;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -68,7 +67,7 @@ public class PohOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		LocalPoint localLocation = client.getLocalPlayer().getLocalLocation();
 		plugin.getPohObjects().forEach((object, tile) ->

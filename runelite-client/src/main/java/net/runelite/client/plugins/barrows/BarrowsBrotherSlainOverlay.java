@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.barrows;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import javax.inject.Inject;
 import net.runelite.api.Client;
@@ -57,7 +56,7 @@ public class BarrowsBrotherSlainOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		// Do not display overlay if potential is null/hidden
 		final Widget potential = client.getWidget(WidgetInfo.BARROWS_POTENTIAL);

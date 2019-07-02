@@ -26,7 +26,6 @@ package net.runelite.client.plugins.demonicgorilla;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.geom.Arc2D;
 import java.awt.image.BufferedImage;
@@ -78,7 +77,7 @@ public class DemonicGorillaOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		for (DemonicGorilla gorilla : plugin.getGorillas().values())
 		{

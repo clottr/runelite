@@ -26,7 +26,6 @@ package net.runelite.client.plugins.itemstats;
 
 import com.google.inject.Inject;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import net.runelite.api.Client;
 import net.runelite.api.EquipmentInventorySlot;
@@ -69,7 +68,7 @@ public class ItemStatOverlay extends Overlay
 	private ItemStatConfig config;
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (client.isMenuOpen() || (!config.relative() && !config.absolute() && !config.theoretical()))
 		{

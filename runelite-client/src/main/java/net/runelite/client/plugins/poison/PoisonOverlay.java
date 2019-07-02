@@ -24,7 +24,6 @@
  */
 package net.runelite.client.plugins.poison;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import javax.inject.Inject;
@@ -55,7 +54,7 @@ class PoisonOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (plugin.getLastDamage() <= 0)
 		{

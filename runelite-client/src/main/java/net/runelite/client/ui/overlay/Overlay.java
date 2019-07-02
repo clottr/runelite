@@ -24,15 +24,13 @@
  */
 package net.runelite.client.ui.overlay;
 
-import java.awt.Dimension;
-import java.awt.Point;
-import java.awt.Rectangle;
+import java.awt.*;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 import javax.annotation.Nullable;
 import lombok.Getter;
 import lombok.Setter;
+import net.runelite.api.widgets.WidgetItem;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.ui.overlay.components.LayoutableRenderableEntity;
 
@@ -70,5 +68,16 @@ public abstract class Overlay implements LayoutableRenderableEntity
 		return this.getClass().getSimpleName();
 	}
 
-    protected abstract Collection<Object> getGhosts();
+	@Override
+	public Void render() {
+		return render();
+	}
+
+	@Override
+	public Void render(Graphics2D graphics) {
+
+		return null;
+	}
+
+	public abstract Void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget);
 }

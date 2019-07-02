@@ -24,7 +24,6 @@
  */
 package net.runelite.client.ui.overlay;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.util.Arrays;
 import java.util.List;
@@ -44,7 +43,7 @@ public class OverlayManagerTest
 		}
 
 		@Override
-		public Dimension render(Graphics2D graphics)
+		public Void render(Graphics2D graphics)
 		{
 			throw new UnsupportedOperationException("Not supported yet.");
 		}
@@ -53,7 +52,7 @@ public class OverlayManagerTest
 	private static class OverlayA extends Overlay
 	{
 		@Override
-		public Dimension render(Graphics2D graphics)
+		public Void render(Graphics2D graphics)
 		{
 			return null;
 		}
@@ -62,7 +61,7 @@ public class OverlayManagerTest
 	private static class OverlayB extends Overlay
 	{
 		@Override
-		public Dimension render(Graphics2D graphics)
+		public Void render(Graphics2D graphics)
 		{
 			return null;
 		}

@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.barrows;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.util.List;
@@ -63,7 +62,7 @@ class BarrowsOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		Player local = client.getLocalPlayer();
 		final Color npcColor = getMinimapDotColor(1);

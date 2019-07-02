@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.devtools;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -62,7 +61,7 @@ class WorldMapRegionOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (!plugin.getWorldMapLocation().isActive())
 		{

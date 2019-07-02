@@ -88,7 +88,7 @@ public class XpGlobesOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		final int queueSize = plugin.getXpGlobesSize();
 		if (queueSize == 0)

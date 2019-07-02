@@ -24,7 +24,6 @@
  */
 package net.runelite.client.plugins.blastmine;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import javax.inject.Inject;
@@ -63,7 +62,7 @@ class BlastMineOreCountOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		final Widget blastMineWidget = client.getWidget(WidgetInfo.BLAST_MINE);
 

@@ -26,7 +26,6 @@
 package net.runelite.client.plugins.groundmarkers;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.util.Collection;
@@ -61,7 +60,7 @@ public class GroundMarkerOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		final Collection<ColorTileMarker> points = plugin.getPoints();
 		for (final ColorTileMarker point : points)

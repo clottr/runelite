@@ -49,4 +49,6 @@ public abstract class Plugin implements Module
 	{
 		return injector;
 	}
+
+	public abstract int setAmount();
 }

@@ -74,11 +74,11 @@ public class RunepouchOverlay extends WidgetItemOverlay
 	}
 
 	@Override
-	public void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget)
+	public Void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget)
 	{
 		if (itemId != ItemID.RUNE_POUCH)
 		{
-			return;
+            return null;
 		}
 
 		assert AMOUNT_VARBITS.length == RUNE_VARBITS.length;
@@ -147,7 +147,8 @@ public class RunepouchOverlay extends WidgetItemOverlay
 		{
 			tooltipManager.add(new Tooltip(tooltip));
 		}
-	}
+        return null;
+    }
 
 	private BufferedImage getRuneImage(Runes rune)
 	{

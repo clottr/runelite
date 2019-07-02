@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.groundmarkers;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.util.Collection;
 import javax.inject.Inject;
@@ -62,7 +61,7 @@ class GroundMarkerMinimapOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (!config.drawTileOnMinimmap())
 		{

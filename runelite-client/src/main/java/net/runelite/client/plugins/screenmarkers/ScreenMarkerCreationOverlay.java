@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.screenmarkers;
 
 import java.awt.BasicStroke;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Stroke;
 import javax.inject.Inject;
@@ -48,7 +47,7 @@ public class ScreenMarkerCreationOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		ScreenMarker marker = plugin.getCurrentMarker();
 

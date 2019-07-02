@@ -25,7 +25,7 @@
 package net.runelite.client.plugins.mousehighlight;
 
 import com.google.common.base.Strings;
-import java.awt.Dimension;
+
 import java.awt.Graphics2D;
 import javax.inject.Inject;
 import net.runelite.api.Client;
@@ -55,7 +55,7 @@ class MouseHighlightOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (client.isMenuOpen())
 		{

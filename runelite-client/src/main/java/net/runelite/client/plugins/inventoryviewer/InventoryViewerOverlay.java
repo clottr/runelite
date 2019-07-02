@@ -24,7 +24,6 @@
  */
 package net.runelite.client.plugins.inventoryviewer;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Point;
 import java.awt.image.BufferedImage;
@@ -65,7 +64,7 @@ class InventoryViewerOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		final ItemContainer itemContainer = client.getItemContainer(InventoryID.INVENTORY);
 

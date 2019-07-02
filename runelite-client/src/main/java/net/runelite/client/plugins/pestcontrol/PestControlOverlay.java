@@ -26,7 +26,6 @@
 package net.runelite.client.plugins.pestcontrol;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.geom.Rectangle2D;
@@ -65,7 +64,7 @@ public class PestControlOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		// See if we are in a game or not
 		if (client.getWidget(WidgetInfo.PEST_CONTROL_BLUE_SHIELD) == null)

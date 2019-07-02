@@ -24,7 +24,6 @@
  */
 package net.runelite.client.plugins.mta;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import javax.inject.Inject;
 import net.runelite.client.ui.FontManager;
@@ -45,7 +44,7 @@ public class MTAInventoryOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		for (MTARoom room : plugin.getRooms())
 		{

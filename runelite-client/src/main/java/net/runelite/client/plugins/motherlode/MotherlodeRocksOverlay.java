@@ -27,7 +27,6 @@
 package net.runelite.client.plugins.motherlode;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.awt.image.BufferedImage;
@@ -69,7 +68,7 @@ class MotherlodeRocksOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if ((!config.showVeins() && !config.showRockFalls()) || !plugin.isInMlm())
 		{

@@ -72,7 +72,7 @@ public class PanelComponent implements LayoutableRenderableEntity
 	private final Dimension childDimensions = new Dimension();
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (children.isEmpty())
 		{

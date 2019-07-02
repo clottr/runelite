@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.party;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.util.Iterator;
@@ -52,7 +51,7 @@ class PartyPingOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (plugin.getPartyDataMap().isEmpty())
 		{

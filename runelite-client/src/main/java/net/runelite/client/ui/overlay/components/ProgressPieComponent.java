@@ -45,7 +45,7 @@ public class ProgressPieComponent implements RenderableEntity
 	private Point position;
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		//Construct the arc
 		Arc2D.Float arc = new Arc2D.Float(Arc2D.PIE);

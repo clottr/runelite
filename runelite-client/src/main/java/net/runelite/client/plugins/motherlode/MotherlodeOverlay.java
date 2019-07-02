@@ -26,7 +26,6 @@ package net.runelite.client.plugins.motherlode;
 
 import com.google.common.collect.ImmutableSet;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.time.Duration;
 import java.time.Instant;
@@ -67,7 +66,7 @@ class MotherlodeOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (!plugin.isInMlm() || !config.showMiningStats())
 		{

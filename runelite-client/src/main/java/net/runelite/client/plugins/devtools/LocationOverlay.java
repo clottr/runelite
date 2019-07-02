@@ -53,7 +53,7 @@ public class LocationOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (!plugin.getLocation().isActive())
 		{

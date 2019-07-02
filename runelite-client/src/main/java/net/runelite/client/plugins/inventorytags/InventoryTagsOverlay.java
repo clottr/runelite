@@ -48,7 +48,7 @@ public class InventoryTagsOverlay extends WidgetItemOverlay
 	}
 
 	@Override
-	public void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget)
+	public Void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget)
 	{
 		final String group = plugin.getTag(itemId);
 		if (group != null)
@@ -61,5 +61,6 @@ public class InventoryTagsOverlay extends WidgetItemOverlay
 				graphics.drawImage(outline, (int) bounds.getX(), (int) bounds.getY(), null);
 			}
 		}
-	}
+        return null;
+    }
 }

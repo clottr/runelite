@@ -26,7 +26,6 @@ package net.runelite.client.plugins.devtools;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.awt.geom.AffineTransform;
@@ -85,7 +84,7 @@ public class SceneOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (plugin.getChunkBorders().isActive())
 		{

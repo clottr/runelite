@@ -26,7 +26,6 @@ package net.runelite.client.plugins.npcunaggroarea;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import java.awt.geom.GeneralPath;
@@ -63,7 +62,7 @@ class NpcAggroAreaOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (!plugin.isActive() || plugin.getSafeCenters()[1] == null)
 		{

@@ -27,7 +27,6 @@ package net.runelite.client.plugins.npchighlight;
 
 import java.awt.BasicStroke;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.text.DecimalFormat;
@@ -77,7 +76,7 @@ public class NpcSceneOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (config.showRespawnTimer())
 		{

@@ -95,7 +95,7 @@ class OpponentInfoOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		final Actor opponent = opponentInfoPlugin.getLastOpponent();
 

@@ -24,7 +24,6 @@
  */
 package net.runelite.client.ui.overlay.worldmap;
 
-import java.awt.Dimension;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
@@ -74,7 +73,7 @@ public class WorldMapOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		final List<WorldMapPoint> points = worldMapPointManager.getWorldMapPoints();
 

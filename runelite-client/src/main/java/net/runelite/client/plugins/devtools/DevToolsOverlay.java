@@ -26,7 +26,6 @@
 package net.runelite.client.plugins.devtools;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Font;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
@@ -109,7 +108,7 @@ class DevToolsOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		graphics.setFont(FONT);
 

@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.statusbars;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import javax.inject.Inject;
@@ -99,7 +98,7 @@ class StatusBarsOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D g)
+	public Void render(Graphics2D g)
 	{
 		final Widget widgetBankTitleBar = client.getWidget(WidgetInfo.BANK_TITLE_BAR);
 		if (widgetBankTitleBar != null && !widgetBankTitleBar.isHidden())

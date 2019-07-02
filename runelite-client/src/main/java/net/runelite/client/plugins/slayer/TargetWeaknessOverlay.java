@@ -24,7 +24,6 @@
  */
 package net.runelite.client.plugins.slayer;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.image.BufferedImage;
 import java.util.List;
@@ -63,7 +62,7 @@ class TargetWeaknessOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		final List<NPC> targets = plugin.getHighlightedTargets();
 

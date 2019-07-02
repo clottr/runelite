@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.blastfurnace;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.geom.Area;
 import javax.inject.Inject;
@@ -60,7 +59,7 @@ class BlastFurnaceClickBoxOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		int dispenserState = client.getVar(Varbits.BAR_DISPENSER);
 

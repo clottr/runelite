@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.poh;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.time.Duration;
 import java.time.Instant;
@@ -55,7 +54,7 @@ class BurnerOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (!config.showBurner())
 		{

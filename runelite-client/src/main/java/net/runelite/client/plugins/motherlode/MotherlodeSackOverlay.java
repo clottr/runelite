@@ -27,7 +27,6 @@
 package net.runelite.client.plugins.motherlode;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import javax.inject.Inject;
 import net.runelite.api.Client;
@@ -64,7 +63,7 @@ class MotherlodeSackOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (!plugin.isInMlm())
 		{

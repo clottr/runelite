@@ -27,7 +27,6 @@
 package net.runelite.client.plugins.slayer;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.util.List;
 import javax.inject.Inject;
@@ -53,7 +52,7 @@ public class TargetMinimapOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (!config.highlightTargets())
 		{

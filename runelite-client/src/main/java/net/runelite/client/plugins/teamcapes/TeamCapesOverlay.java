@@ -24,7 +24,6 @@
  */
 package net.runelite.client.plugins.teamcapes;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.util.Map;
 import javax.inject.Inject;
@@ -62,7 +61,7 @@ public class TeamCapesOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		Map<Integer, Integer> teams = plugin.getTeams();
 		if (teams.isEmpty())

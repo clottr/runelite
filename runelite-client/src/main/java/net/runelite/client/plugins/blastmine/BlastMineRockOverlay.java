@@ -26,7 +26,6 @@ package net.runelite.client.plugins.blastmine;
 
 import com.google.common.collect.ImmutableSet;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.awt.image.BufferedImage;
@@ -82,7 +81,7 @@ public class BlastMineRockOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		Map<WorldPoint, BlastMineRock> rocks = plugin.getRocks();
 		if (rocks.isEmpty())

@@ -86,7 +86,7 @@ class XpInfoBoxOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		panel.getChildren().clear();
 		iconXpSplitPanel.getChildren().clear();

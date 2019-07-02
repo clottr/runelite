@@ -48,7 +48,7 @@ public class TooltipComponent implements RenderableEntity
 	private IndexedSprite[] modIcons;
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		// Tooltip size
 		final FontMetrics metrics = graphics.getFontMetrics();

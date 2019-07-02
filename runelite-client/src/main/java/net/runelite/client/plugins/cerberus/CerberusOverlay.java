@@ -24,7 +24,6 @@
  */
 package net.runelite.client.plugins.cerberus;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import javax.inject.Inject;
 import javax.inject.Singleton;
@@ -52,7 +51,7 @@ public class CerberusOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (plugin.getGhosts().isEmpty())
 		{

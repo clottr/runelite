@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.hunter;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.util.Map;
 import javax.inject.Inject;
@@ -69,7 +68,7 @@ public class TrapOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		drawTraps(graphics);
 		return null;

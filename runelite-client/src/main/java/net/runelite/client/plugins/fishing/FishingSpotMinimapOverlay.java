@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.fishing;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import javax.inject.Inject;
 import lombok.AccessLevel;
@@ -55,7 +54,7 @@ class FishingSpotMinimapOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (hidden)
 		{

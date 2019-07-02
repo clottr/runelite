@@ -68,7 +68,7 @@ class CorpDamageOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		Widget damageWidget = client.getWidget(WidgetID.CORP_DAMAGE, 0);
 		if (damageWidget != null)

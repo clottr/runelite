@@ -35,7 +35,6 @@ import net.runelite.client.ui.overlay.tooltip.TooltipManager;
 import net.runelite.client.util.ColorUtil;
 import javax.inject.Inject;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 
@@ -56,7 +55,7 @@ class CombatLevelOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		Widget combatLevelWidget = client.getWidget(WidgetInfo.COMBAT_LEVEL);
 		if (!config.showLevelsUntil()

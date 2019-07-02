@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.tithefarm;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.util.HashMap;
 import java.util.Map;
@@ -83,7 +82,7 @@ public class TitheFarmPlantOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		final Widget viewport = client.getViewportWidget();
 

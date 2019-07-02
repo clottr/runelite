@@ -26,7 +26,6 @@ package net.runelite.client.plugins.kourendlibrary;
 
 import com.google.inject.Inject;
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.FontMetrics;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
@@ -74,7 +73,7 @@ class KourendLibraryOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D g)
+	public Void render(Graphics2D g)
 	{
 		if (hidden)
 		{

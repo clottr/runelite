@@ -56,7 +56,7 @@ class NpcAggroAreaNotWorkingOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (!plugin.isActive() || plugin.getSafeCenters()[1] != null || config.hideOverlayHint())
 		{

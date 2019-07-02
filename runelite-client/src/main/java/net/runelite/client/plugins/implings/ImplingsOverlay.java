@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.implings;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Polygon;
 import java.util.List;
@@ -62,7 +61,7 @@ public class ImplingsOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		List<NPC> implings = plugin.getImplings();
 

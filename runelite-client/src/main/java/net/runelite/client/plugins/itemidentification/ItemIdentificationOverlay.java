@@ -52,12 +52,12 @@ class ItemIdentificationOverlay extends WidgetItemOverlay
 	}
 
 	@Override
-	public void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget)
+	public Void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget)
 	{
 		ItemIdentification iden = ItemIdentification.get(itemId);
 		if (iden == null)
 		{
-			return;
+            return null;
 		}
 
 		switch (iden.type)
@@ -65,19 +65,19 @@ class ItemIdentificationOverlay extends WidgetItemOverlay
 			case SEED:
 				if (!config.showSeeds())
 				{
-					return;
+                    return null;
 				}
 				break;
 			case HERB:
 				if (!config.showHerbs())
 				{
-					return;
+                    return null;
 				}
 				break;
 			case SAPLING:
 				if (!config.showSaplings())
 				{
-					return;
+                    return null;
 				}
 				break;
 		}
@@ -85,7 +85,8 @@ class ItemIdentificationOverlay extends WidgetItemOverlay
 		graphics.setFont(FontManager.getRunescapeSmallFont());
 		renderText(graphics, itemWidget.getCanvasBounds(), iden);
 
-	}
+        return null;
+    }
 
 	private void renderText(Graphics2D graphics, Rectangle bounds, ItemIdentification iden)
 	{

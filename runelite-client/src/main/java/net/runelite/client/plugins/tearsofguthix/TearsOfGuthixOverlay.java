@@ -25,7 +25,6 @@
 package net.runelite.client.plugins.tearsofguthix;
 
 import java.awt.Color;
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.time.Duration;
 import java.time.Instant;
@@ -51,7 +50,7 @@ class TearsOfGuthixOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		plugin.getStreams().forEach((object, timer) ->
 		{

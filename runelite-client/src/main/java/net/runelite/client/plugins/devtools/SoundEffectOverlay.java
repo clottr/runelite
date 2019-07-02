@@ -64,7 +64,7 @@ class SoundEffectOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		if (!plugin.getSoundEffects().isActive())
 		{

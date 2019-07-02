@@ -24,7 +24,6 @@
  */
 package net.runelite.client.ui.overlay;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.util.Arrays;
 import java.util.HashSet;
@@ -62,10 +61,10 @@ public abstract class WidgetItemOverlay extends Overlay
 		super.setLayer(OverlayLayer.ABOVE_WIDGETS);
 	}
 
-	public abstract void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget);
+	public abstract Void renderItemOverlay(Graphics2D graphics, int itemId, WidgetItem itemWidget);
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		final List<WidgetItem> itemWidgets = overlayManager.getItemWidgets();
 		for (WidgetItem widgetItem : itemWidgets)
@@ -84,7 +83,7 @@ public abstract class WidgetItemOverlay extends Overlay
 		return null;
 	}
 
-	protected void showOnInventory()
+	public void showOnInventory()
 	{
 		showOnInterfaces(
 			DEPOSIT_BOX_GROUP_ID,

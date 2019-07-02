@@ -24,7 +24,6 @@
  */
 package net.runelite.client.plugins.cluescrolls;
 
-import java.awt.Dimension;
 import java.awt.Graphics2D;
 import java.awt.Rectangle;
 import javax.inject.Inject;
@@ -56,7 +55,7 @@ class ClueScrollMusicOverlay extends Overlay
 	}
 
 	@Override
-	public Dimension render(Graphics2D graphics)
+	public Void render(Graphics2D graphics)
 	{
 		ClueScroll clue = plugin.getClue();
 

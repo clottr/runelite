@@ -35,18 +35,18 @@ import java.lang.annotation.Target;
 @Documented
 public @interface PluginDescriptor
 {
-	String name();
+	String config();
 
 	/**
 	 * A short, one-line summary of the plugin.
 	 */
-	String description() default "";
+	String description() default "quick nice plugin I made to see configs";
 
 	/**
 	 * A list of plugin keywords, used (together with the name) when searching for plugins.
 	 * Each tag should not contain any spaces, and should be fully lowercase.
 	 */
-	String[] tags() default {};
+	String[] tags() default {"config,nothingspecial,banking,bossing"};
 
 	boolean enabledByDefault() default true;
 
