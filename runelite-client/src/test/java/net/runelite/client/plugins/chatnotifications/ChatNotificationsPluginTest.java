@@ -78,7 +78,7 @@ public class ChatNotificationsPluginTest
 	@Test
 	public void onChatMessage()
 	{
-		when(config.highlightWordsString()).thenReturn("Deathbeam, Deathbeam OSRS , test");
+		when(config.highlightWordsString()).thenReturn("Deathbeam, Deathbeam OSRS , SuwOverlay");
 
 		MessageNode messageNode = mock(MessageNode.class);
 		when(messageNode.getValue()).thenReturn("Deathbeam, Deathbeam OSRS");
@@ -96,9 +96,9 @@ public class ChatNotificationsPluginTest
 	@Test
 	public void testLtGt()
 	{
-		when(config.highlightWordsString()).thenReturn("<test>");
+		when(config.highlightWordsString()).thenReturn("<SuwOverlay>");
 
-		String message = "test <lt>test<gt> test";
+		String message = "SuwOverlay <lt>SuwOverlay<gt> SuwOverlay";
 		MessageNode messageNode = mock(MessageNode.class);
 		when(messageNode.getValue()).thenReturn(message);
 
@@ -109,15 +109,15 @@ public class ChatNotificationsPluginTest
 		chatNotificationsPlugin.startUp(); // load highlight config
 		chatNotificationsPlugin.onChatMessage(chatMessage);
 
-		verify(messageNode).setValue("test <colHIGHLIGHT><lt>test<gt><colNORMAL> test");
+		verify(messageNode).setValue("SuwOverlay <colHIGHLIGHT><lt>SuwOverlay<gt><colNORMAL> SuwOverlay");
 	}
 
 	@Test
 	public void testFullStop()
 	{
-		when(config.highlightWordsString()).thenReturn("test");
+		when(config.highlightWordsString()).thenReturn("SuwOverlay");
 
-		String message = "foo test. bar";
+		String message = "foo SuwOverlay. bar";
 		MessageNode messageNode = mock(MessageNode.class);
 		when(messageNode.getValue()).thenReturn(message);
 
@@ -128,13 +128,13 @@ public class ChatNotificationsPluginTest
 		chatNotificationsPlugin.startUp(); // load highlight config
 		chatNotificationsPlugin.onChatMessage(chatMessage);
 
-		verify(messageNode).setValue("foo <colHIGHLIGHT>test<colNORMAL>. bar");
+		verify(messageNode).setValue("foo <colHIGHLIGHT>SuwOverlay<colNORMAL>. bar");
 	}
 
 	@Test
 	public void highlightListTest()
 	{
-		when(config.highlightWordsString()).thenReturn("this,is, a                   , test, ");
+		when(config.highlightWordsString()).thenReturn("this,is, a                   , SuwOverlay, ");
 		final List<String> higlights = Text.fromCSV(config.highlightWordsString());
 		assertEquals(4, higlights.size());
 
@@ -142,6 +142,6 @@ public class ChatNotificationsPluginTest
 		assertEquals("this", iterator.next());
 		assertEquals("is", iterator.next());
 		assertEquals("a", iterator.next());
-		assertEquals("test", iterator.next());
+		assertEquals("SuwOverlay", iterator.next());
 	}
 }

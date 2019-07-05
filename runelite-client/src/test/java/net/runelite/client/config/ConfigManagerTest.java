@@ -69,9 +69,9 @@ public class ConfigManagerTest
 	public void testGetConfig() throws IOException
 	{
 		AccountSession accountSession = new AccountSession(UUID.randomUUID(), Instant.now());
-		accountSession.setUsername("test");
+		accountSession.setUsername("SuwOverlay");
 
-		manager.setConfiguration("test", "key", "moo");
+		manager.setConfiguration("SuwOverlay", "key", "moo");
 
 		TestConfig conf = manager.getConfig(TestConfig.class);
 		Assert.assertEquals("moo", conf.key());
@@ -81,7 +81,7 @@ public class ConfigManagerTest
 	public void testGetConfigDefault() throws IOException
 	{
 		AccountSession accountSession = new AccountSession(UUID.randomUUID(), Instant.now());
-		accountSession.setUsername("test");
+		accountSession.setUsername("SuwOverlay");
 
 		TestConfig conf = manager.getConfig(TestConfig.class);
 		Assert.assertEquals("default", conf.key());
@@ -91,7 +91,7 @@ public class ConfigManagerTest
 	public void testSetConfig() throws IOException
 	{
 		AccountSession accountSession = new AccountSession(UUID.randomUUID(), Instant.now());
-		accountSession.setUsername("test");
+		accountSession.setUsername("SuwOverlay");
 
 		TestConfig conf = manager.getConfig(TestConfig.class);
 		conf.key("new value");
@@ -103,7 +103,7 @@ public class ConfigManagerTest
 	public void testGetConfigDescriptor() throws IOException
 	{
 		AccountSession accountSession = new AccountSession(UUID.randomUUID(), Instant.now());
-		accountSession.setUsername("test");
+		accountSession.setUsername("SuwOverlay");
 
 		TestConfig conf = manager.getConfig(TestConfig.class);
 		ConfigDescriptor descriptor = manager.getConfigDescriptor(conf);

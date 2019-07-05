@@ -56,10 +56,10 @@ public class TextComponentTest
 	public void testRender()
 	{
 		TextComponent textComponent = new TextComponent();
-		textComponent.setText("test");
+		textComponent.setText("SuwOverlay");
 		textComponent.setColor(Color.RED);
 		textComponent.render(graphics);
-		verify(graphics, times(2)).drawString(eq("test"), anyInt(), anyInt());
+		verify(graphics, times(2)).drawString(eq("SuwOverlay"), anyInt(), anyInt());
 		verify(graphics, atLeastOnce()).setColor(Color.RED);
 	}
 	
@@ -67,9 +67,9 @@ public class TextComponentTest
 	public void testRender2()
 	{
 		TextComponent textComponent = new TextComponent();
-		textComponent.setText("<col=0000ff>test");
+		textComponent.setText("<col=0000ff>SuwOverlay");
 		textComponent.render(graphics);
-		verify(graphics, times(2)).drawString(eq("test"), anyInt(), anyInt());
+		verify(graphics, times(2)).drawString(eq("SuwOverlay"), anyInt(), anyInt());
 		verify(graphics, atLeastOnce()).setColor(Color.BLUE);
 	}
 	
@@ -77,10 +77,10 @@ public class TextComponentTest
 	public void testRender3()
 	{
 		TextComponent textComponent = new TextComponent();
-		textComponent.setText("<col=0000ff>test<col=00ff00> test");
+		textComponent.setText("<col=0000ff>SuwOverlay<col=00ff00> SuwOverlay");
 		textComponent.render(graphics);
-		verify(graphics, atLeastOnce()).drawString(eq("test"), anyInt(), anyInt());
-		verify(graphics, atLeastOnce()).drawString(eq(" test"), anyInt(), anyInt());
+		verify(graphics, atLeastOnce()).drawString(eq("SuwOverlay"), anyInt(), anyInt());
+		verify(graphics, atLeastOnce()).drawString(eq(" SuwOverlay"), anyInt(), anyInt());
 		verify(graphics, atLeastOnce()).setColor(Color.BLUE);
 		verify(graphics, atLeastOnce()).setColor(Color.GREEN);
 	}

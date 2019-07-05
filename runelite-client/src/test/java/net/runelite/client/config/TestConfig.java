@@ -24,7 +24,7 @@
  */
 package net.runelite.client.config;
 
-@ConfigGroup("test")
+@ConfigGroup("SuwOverlay")
 public interface TestConfig
 {
 	@ConfigItem(
